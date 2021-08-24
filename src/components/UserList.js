@@ -4,6 +4,7 @@ import {
   Datagrid,
   TextField,
   EmailField,
+  BooleanField,
   EditButton,
   DeleteButton,
 } from 'react-admin'
@@ -12,7 +13,8 @@ const UserList = (props) => {
   return (
     <List {...props}>
       <Datagrid>
-        <TextField source='id' />
+        <BooleanField source='verified' />
+        <TextField source='id' label="No. TEC" />
         <TextField source='name' />
         <EmailField source='email' />
         <EditButton basePath='/users' />
