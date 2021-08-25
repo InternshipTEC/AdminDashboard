@@ -15,12 +15,12 @@ const UserEdit = (props) => {
     <Edit title='Edit User' {...props}>
       <SimpleForm>
         <ImageField classes={imageFieldClasses} source='photoUrl' />
-        <TextInput source='metode' disabled/>
+        <TextInput source='uniqueIdentifier' disabled/>
+        <TextInput source='nominal' disabled/>
         <TextInput source='media' disabled/>
         <TextInput source='noRekening' disabled/>
         <TextInput source='pemilikRekening' disabled/>
         <BooleanInput source='verified'/>
-        <BooleanInput source='fromAdmin' style={{display:'none'}}/>
       </SimpleForm>
     </Edit>
   )
