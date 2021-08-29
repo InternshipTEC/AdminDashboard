@@ -11,7 +11,7 @@ import axios from 'axios'
 
 const authProvider = {
     login: ({ username, password }) => {
-        return axios.post("http://localhost:3000/auth/login",{
+        return axios.post("https://api.tecinternship2021.com/auth/login",{
             email:username,
             password
         })
@@ -48,7 +48,7 @@ const httpClient = (url, options = {}) => {
   return fetchUtils.fetchJson(url, options);
 };
 
-const dataProvider = restProvider('http://localhost:3000',httpClient)
+const dataProvider = restProvider('https://api.tecinternship2021.com',httpClient)
 
 function App() {
   return (
