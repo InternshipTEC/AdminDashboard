@@ -13,6 +13,7 @@ const UserList = (props) => {
     <List {...props}>
       <Datagrid>
         <BooleanField source="verified"/>
+        <TextField source='uniqueIdentifier' />
         <TextField source='pemilikRekening' />
         <EditButton basePath='/transaction' />
         <DeleteButton basePath='/transaction' />

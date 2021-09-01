@@ -9,9 +9,11 @@ import TransactionList from './components/TransactionList'
 import TransactionEdit from './components/TransactionEdit'
 import axios from 'axios'
 
+export const BACKEND_URL = "http://localhost:3000"
+
 const authProvider = {
     login: ({ username, password }) => {
-        return axios.post("http://localhost:3000/auth/login",{
+        return axios.post(`${BACKEND_URL}/auth/login`,{
             email:username,
             password
         })
@@ -48,7 +50,7 @@ const httpClient = (url, options = {}) => {
   return fetchUtils.fetchJson(url, options);
 };
 
-const dataProvider = restProvider('http://localhost:3000',httpClient)
+const dataProvider = restProvider(BACKEND_URL,httpClient)
 
 function App() {
   return (
