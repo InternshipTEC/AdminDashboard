@@ -8,6 +8,9 @@ import TransactionCreate from './components/TransactionCreate'
 import TransactionList from './components/TransactionList'
 import TransactionEdit from './components/TransactionEdit'
 import axios from 'axios'
+import EventList from './components/EventList'
+import EventCreate from './components/EventCreate'
+import EventEdit from './components/EventEdit'
 
 export const BACKEND_URL = "http://localhost:3000"
 
@@ -66,6 +69,12 @@ function App() {
         list={TransactionList}
         create={TransactionCreate}
         edit={TransactionEdit}
+      />
+      <Resource
+        name='event'
+        list={EventList}
+        create={EventCreate}
+        edit={EventEdit}
       />
     </Admin>
   )
