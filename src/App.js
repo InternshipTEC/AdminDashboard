@@ -9,9 +9,11 @@ import TransactionList from './components/TransactionList'
 import TransactionEdit from './components/TransactionEdit'
 import axios from 'axios'
 
+export const BACKEND_URL = "https://api.tecinternship2021.com"
+
 const authProvider = {
     login: ({ username, password }) => {
-        return axios.post("https://api.tecinternship2021.com/auth/login",{
+        return axios.post(`${BACKEND_URL}/auth/login`,{
             email:username,
             password
         })
@@ -48,7 +50,7 @@ const httpClient = (url, options = {}) => {
   return fetchUtils.fetchJson(url, options);
 };
 
-const dataProvider = restProvider('https://api.tecinternship2021.com',httpClient)
+const dataProvider = restProvider(BACKEND_URL,httpClient)
 
 function App() {
   return (
