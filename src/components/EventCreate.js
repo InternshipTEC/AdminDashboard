@@ -6,7 +6,7 @@ const EventCreate = (props) => {
     <Create title='Create an Event' {...props}>
       <SimpleForm>
         <TextInput source='name'/>
-        <TextInput source='url'/>
+        <TextInput source='description'/>
         <DateTimeInput source='absenStartsAt'/>
         <DateTimeInput source='absenEndedAt'/>
       </SimpleForm>
