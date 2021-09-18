@@ -11,8 +11,11 @@ import axios from 'axios'
 import EventList from './components/EventList'
 import EventCreate from './components/EventCreate'
 import EventEdit from './components/EventEdit'
+import TugasList from './components/TugasList'
+import TugasCreate from './components/TugasCreate'
+import TugasEdit from './components/TugasEdit'
 
-export const BACKEND_URL = "https://api.tecinternship2021.com"
+export const BACKEND_URL = "http://localhost:3000"
 
 const authProvider = {
     login: ({ username, password }) => {
@@ -75,6 +78,12 @@ function App() {
         list={EventList}
         create={EventCreate}
         edit={EventEdit}
+      />
+      <Resource
+        name='tugas'
+        list={TugasList}
+        create={TugasCreate}
+        edit={TugasEdit}
       />
     </Admin>
   )
