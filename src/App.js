@@ -21,8 +21,8 @@ import MateriList from "./components/MateriList";
 import MateriCreate from "./components/MateriCreate";
 import MateriEdit from "./components/MateriEdit";
 
-export const BACKEND_URL = "http://localhost:3000";
-// export const BACKEND_URL = "https://api.tecinternship2021.com";
+// export const BACKEND_URL = "http://localhost:3000";
+export const BACKEND_URL = "https://api.tecinternship2021.com";
 
 const authProvider = {
   login: ({ username, password }) => {
