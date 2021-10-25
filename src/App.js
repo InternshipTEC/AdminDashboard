@@ -14,6 +14,9 @@ import axios from "axios";
 import EventList from "./components/EventList";
 import EventCreate from "./components/EventCreate";
 import EventEdit from "./components/EventEdit";
+import FypBlogList from "./components/FypBlogList";
+import FypBlogCreate from "./components/FypBlogCreate";
+import FypBlogEdit from "./components/FypBlogEdit";
 import TugasList from "./components/TugasList";
 import TugasCreate from "./components/TugasCreate";
 import TugasEdit from "./components/TugasEdit";
@@ -21,8 +24,8 @@ import MateriList from "./components/MateriList";
 import MateriCreate from "./components/MateriCreate";
 import MateriEdit from "./components/MateriEdit";
 
-// export const BACKEND_URL = "http://localhost:3000";
-export const BACKEND_URL = "https://api.tecinternship2021.com";
+export const BACKEND_URL = "http://localhost:3000";
+// export const BACKEND_URL = "https://api.tecinternship2021.com";
 
 const authProvider = {
   login: ({ username, password }) => {
@@ -104,6 +107,12 @@ function App() {
         list={MateriList}
         create={MateriCreate}
         edit={MateriEdit}
+      />
+      <Resource
+        name="fyp-blog"
+        list={FypBlogList}
+        create={FypBlogCreate}
+        edit={FypBlogEdit}
       />
     </Admin>
   );
