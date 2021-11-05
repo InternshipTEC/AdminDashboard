@@ -17,6 +17,8 @@ import EventEdit from "./components/EventEdit";
 import FypBlogList from "./components/FypBlogList";
 import FypBlogCreate from "./components/FypBlogCreate";
 import FypBlogEdit from "./components/FypBlogEdit";
+import FypProfileList from "./components/FypProfileList";
+import FypProfileEdit from "./components/FypProfileEdit";
 import TugasList from "./components/TugasList";
 import TugasCreate from "./components/TugasCreate";
 import TugasEdit from "./components/TugasEdit";
@@ -113,6 +115,11 @@ function App() {
         list={FypBlogList}
         create={FypBlogCreate}
         edit={FypBlogEdit}
+      />
+      <Resource
+        name="fyp-profile"
+        list={FypProfileList}
+        edit={FypProfileEdit}
       />
     </Admin>
   );
